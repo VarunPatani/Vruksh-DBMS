@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/Images/Vruksh Logo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/static/login.css" />
+    <title>Welcome Page</title>
+  </head>
+  <body class="mainBody">
+    <div class="container">
+      <div class="coverPage">
+        <h1>Welcome</h1>
+        <p>To Vruksh database Management</p>
+        <div class="btn">
+          <button>Proceed to admin menu</button>
+        </div>
+      </div>
+      <div class="details">
+        <h1>enter your details</h1>
+        <form>
+          <div class="text">
+            <input
+              type="text"
+              placeholder="Username"
+              autocomplete="off"
+              id="text"
+            />
+            <i class="fa-solid fa-circle-user" id="user-icon"></i>
+          </div>
+          <div class="password">
+            <input
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+              id="pass"
+            />
+            <i class="fa-solid fa-eye" id="eye-icon"></i>
+          </div>
+          <div class="btn2">
+            <button type="submit" onclick="auth()">Log In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const btn = document.querySelector(".btn button");
+      const con = document.querySelector(".container");
+
+      const eyeicon = document.querySelector("#eye-icon");
+      const pass = document.querySelector("#pass");
+
+      var usericon = document.querySelector("#user-icon");
+      var text = document.querySelector("#text");
+
+      usericon.addEventListener("click", () => {
+        text.value = "";
+      });
+
+      btn.addEventListener("click", () => {
+        con.classList.toggle("change");
+      });
+
+      eyeicon.addEventListener("click", () => {
+        if (pass.type == "password") {
+          pass.type = "text";
+          eyeicon.classList.toggle("fa-eye-slash");
+        } else {
+          pass.type = "password";
+          eyeicon.classList.toggle("fa-eye-slash");
+        }
+      });
+
+      function auth() {
+        var text = document.getElementById("text").value;
+        var pass = document.getElementById("pass").value;
+        if (text == "admin" && pass == "admin") {
+          window.location.assign("/tables");
+          alert("Login Successfull");
+        } else {
+          alert("Invalid");
+        }
+      }
+    </script>
+  </body>
+</html>

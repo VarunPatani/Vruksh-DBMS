@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", "sans-serif";
+  background-image: url(/static/Images/blured-green-leaves.jpg);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: hidden;
+}
+
+.log_out {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem 5rem 0 0;
+  font-size: 3rem;
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 800;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+}
+
+.log_out:hover {
+  transform: scale(1.2);
+}
+
+.head {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+  color: #2d2d23;
+  font-family: "Quicksand", "sans-serif";
+  text-transform: uppercase;
+}
+
+.main {
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.tables {
+  margin: 5rem 3rem 10rem 3rem;
+  height: 80vh;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.table button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-rows: 1fr 2fr;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
+  border-width: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  height: 90%;
+  transition: transform 1s ease, box-shadow 1s ease;
+  border-radius: 3rem;
+}
+
+.table button:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(83, 255, 158, 0.1),
+    rgba(77, 87, 10, 0.2)
+  );
+  transform: translateY(-1.5rem);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+}
+
+.table button h1 {
+  margin: 0rem 1.5rem 0 1.5rem;
+  padding: 0rem 1.5rem 0 1.5rem;
+  text-transform: uppercase;
+  font-family: "Quicksand", "sans-serif";
+  color: #2d2d23;
+}
+
+.table button p {
+  font-weight: 900;
+  margin: 2.5rem 1.5rem 0 1.5rem;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  text-align: center;
+  height: 100%;
+  text-transform: uppercase;
+  font-family: "Quicksand", "sans-serif";
+  color: #2d2d23;
+}

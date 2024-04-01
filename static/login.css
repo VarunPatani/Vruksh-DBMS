@@ -1,0 +1,202 @@
+@keyframes slideOut {
+  from {
+    transform: translateY(-10rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* @keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* this is done to make all 'rem' equal to 10px */
+}
+
+.mainBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(/static/Images/leaf1.jpeg); */
+  background-image: url(/static/Images/blured-green-leaves.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  transform: scale(0.75);
+  /* overflow: hidden; */
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100rem;
+  height: 60rem;
+  overflow: hidden;
+}
+
+.coverPage {
+  position: absolute;
+  font-size: 3rem;
+  width: 100rem;
+  height: 60rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  font-family: "Quicksand", "sans-serif";
+  /* background: linear-gradient(to bottom, rgb(11, 211, 114), rgb(14, 69, 33)); */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 6rem;
+  animation: slideOut 1s ease 0.3s 1;
+  z-index: 50;
+  transition: transform 2s ease-in-out;
+  border: 1rem solid rgba(0, 0, 0, 0.5);
+}
+
+.coverPage h1 {
+  color: white;
+  font-size: 9rem;
+  margin: 10rem 0 6rem 0;
+}
+
+.coverPage p {
+  margin: 5rem 0rem;
+  font-weight: 700;
+  color: white;
+  font-size: 4rem;
+}
+
+.coverPage button {
+  margin: 5rem 0rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-width: 0.3rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  border-width: 0.6rem 0.6rem 0.6rem 0.6rem;
+  transition: transform 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+}
+
+.coverPage button:hover {
+  transform: scale(1.2);
+}
+
+.change .coverPage {
+  transform: translateY(-100rem);
+}
+
+.details {
+  position: absolute;
+  width: 100rem;
+  height: 60rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Quicksand", "sans-serif";
+  /* background: linear-gradient(to bottom, rgb(11, 211, 114), rgb(14, 69, 33)); */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 6rem;
+  transform: translateY(100%);
+  transition: transform 1.5s ease-in-out;
+  border: 1rem solid rgba(0, 0, 0, 0.5);
+}
+
+.change .details {
+  transform: translateY(0);
+}
+
+.details h1 {
+  font-size: 7rem;
+  color: rgb(255, 255, 255);
+  margin: 5rem 0 3rem 0;
+}
+
+.details .text input {
+  font-family: "Quicksand", "sans-serif";
+  width: 40rem;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 2rem 0 2rem 3rem;
+  margin: 4rem 0 4rem 0;
+  border: none;
+  border-radius: 4rem;
+}
+
+.fa-circle-user {
+  font-size: 3rem;
+  position: absolute;
+  top: 23rem;
+  right: 33rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.details .password input {
+  font-family: "Quicksand", "sans-serif";
+  width: 40rem;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 2rem 0 2rem 3rem;
+  border: none;
+  border-radius: 4rem;
+}
+
+.fa-eye {
+  font-size: 3rem;
+  position: absolute;
+  top: 35rem;
+  right: 33rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.details .btn2 button {
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 700;
+  font-size: 3rem;
+  width: 20rem;
+  margin: 6rem 0 4rem 0;
+  padding: 1rem 2rem;
+  border-width: 0.3rem;
+  border-top-width: 0.6rem;
+  border-bottom-width: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.details .btn2 button:hover {
+  transform: scale(1.2);
+}

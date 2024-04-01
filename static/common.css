@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(/static/Images/blured-green-leaves.jpg);
+  /* overflow: hidden; */
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fa-circle-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 7rem 0 0 5rem;
+  font-size: 5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.fa-circle-left:hover {
+  transform: scale(1.5);
+}
+
+.header {
+  font-size: 10rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.insert {
+  position: absolute;
+  width: 15rem;
+  right: 0rem;
+  top: 0rem;
+  margin: 5rem 5rem 0 0;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Quicksand", "sans-serif";
+  text-transform: uppercase;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  border-width: 0.5rem;
+  border-radius: 2rem;
+}
+
+.insert:hover {
+  transform: scale(1.2);
+}
+
+.changed .insert,
+.changed .fa-circle-left {
+  display: none;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  width: 15rem;
+  top: 8rem;
+  margin: 5rem 5rem 0 0;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Quicksand", "sans-serif";
+  text-transform: uppercase;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  border-width: 0.5rem;
+  border-radius: 2rem;
+}
+
+.delete:hover {
+  transform: scale(1.2);
+}
+
+.change .delete,
+.change .fa-circle-left {
+  display: none;
+}
+
+.insertTextBox {
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 7rem;
+  left: 90%;
+  height: 70vh;
+  width: 80%;
+  font-size: 2rem;
+  text-align: center;
+  transition: left 0.5s ease;
+}
+
+.change .insertTextBox {
+  left: 10%;
+}
+
+.change .insertTextBox button {
+  margin: 3rem 0 10rem 0;
+}
+
+.insertTextBox input {
+  width: 70%;
+  height: 3rem;
+  font-size: 3rem;
+  margin: 1.5rem;
+  padding: 3rem;
+  text-align: center;
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 900;
+  background-color: transparent;
+  border: 1rem solid rgba(0, 0, 0, 0.7);
+  border-width: 0.5rem;
+  border-radius: 2rem;
+}
+
+.insertTextBox input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.insertTextBox button {
+  margin: 0 auto;
+  font-size: 3rem;
+  width: 50rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  border-width: 0.5rem;
+  border-radius: 2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.insertTextBox button:hover {
+  transform: scale(1.2);
+}
+
+.deleteTextBox {
+  position: absolute;
+  left: 90%;
+  margin: 0 auto;
+  height: 70vh;
+  width: 80%;
+  text-align: center;
+  margin-top: 7rem;
+  transition: left 0.5s ease;
+}
+
+.changed .deleteTextBox {
+  left: 10%;
+}
+
+.deleteTextBox input {
+  width: 50%;
+  height: 4.5rem;
+  font-size: 3rem;
+  margin: 2rem;
+  padding: 3rem;
+  text-align: center;
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 900;
+  background-color: transparent;
+  border: 1rem solid rgba(0, 0, 0, 0.5);
+  border-width: 0.5rem;
+  border-radius: 2rem;
+}
+
+.deleteTextBox button {
+  margin: 2rem auto 2rem auto;
+  font-size: 3rem;
+  padding: 1rem;
+  width: 50rem;
+  text-transform: uppercase;
+  font-family: "Quicksand", "sans-serif";
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 0.5rem solid rgba(0, 0, 0, 0.5);
+  border-width: 0.5rem;
+  border-radius: 2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.deleteTextBox button:hover {
+  transform: scale(1.2);
+}
+
+.table {
+  position: absolute;
+  left: 50%;
+  zoom: 85%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  height: 70vh;
+  width: 80%;
+  font-size: 2rem;
+  margin-top: 7rem;
+  transition: left 0.5s ease;
+  border: 0.8rem solid rgb(0, 0, 0);
+}
+
+.change .table,
+.changed .table {
+  left: -90%;
+}
+
+.table_head {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.table_body {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Quicksand";
+}
+
+.thead_row {
+  font-family: "Quicksand";
+}
+
+.thead_data {
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(126, 126, 126, 0.5)
+  );
+}
+
+.table_data {
+  word-wrap: normal;
+  padding: 0.6rem;
+  font-weight: 800;
+}

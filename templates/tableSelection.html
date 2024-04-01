@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/Images/Vruksh Logo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/static/tableSelection.css" />
+    <title>Table Selection</title>
+  </head>
+  <body>
+    <button class="log_out">Log Out</button>
+    <header class="head">
+      <h1>Table Selection</h1>
+    </header>
+    <main class="main">
+      <div class="tables">
+        <div class="table">
+          <button class="doctor">
+            <h1>Doctor</h1>
+            <p>
+              Consists of Doctor's Details like Name, Gender, DOB,
+              Specialization, Address, Contact, Email
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="patient">
+            <h1>Patient</h1>
+            <p>
+              Consists of Patient's Details like Name, Gender, DOB, Email,
+              Address, Contact, Diagnosis, Room number, Blood Group
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="nurse">
+            <h1>Nurse</h1>
+            <p>
+              Consists Nurses's Details like Name, Gender, Email, Address,
+              Contact
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="staff">
+            <h1>Staff</h1>
+            <p>
+              Consists Staff's Details like Name, Gender, Email, Address,
+              Contact
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="department">
+            <h1>Department</h1>
+            <p>
+              Consists of department details like Name, Its operating Hours,
+              Number of beds
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="medication">
+            <h1>Medication</h1>
+            <p>
+              Consists of details about the medical supplies like Name,
+              Manufacturer, Unit Price, Expiry date, Total quantity, Status
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="medical_records">
+            <h1>Medical Records</h1>
+            <p>Consists of the patients admission date and discharge date</p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="billing">
+            <h1>Billing</h1>
+            <p>Consists of the patients billing amount and its payment date</p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="branch">
+            <h1>Branch</h1>
+            <p>Consists of the hospitals branch location details</p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="non_medical_supplies">
+            <h1>Non-Medical Supplies</h1>
+            <p>
+              Consists of the non-medical supply details like Name, Quantity,
+              Status, Manufacturer
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="doctor_medication">
+            <h1>Doctor ~ Medication</h1>
+            <p>
+              Consists of Data of which doctor prescribes which medication to
+              which patient
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="doctor_nurse">
+            <h1>Doctor ~ Nurse</h1>
+            <p>
+              Consists of Data of which doctor is associated with which nurse
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="patient_nurse">
+            <h1>Patient ~ Nurse</h1>
+            <p>Consists of Data of which nurse handles which patient</p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="patient_medication">
+            <h1>Patient ~ Medication</h1>
+            <p>
+              Consists of Data of which patient is prescribed what medication
+            </p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="department_medication">
+            <h1>Department ~ Medication</h1>
+            <p>Consists of Data of which Department has which medication</p>
+          </button>
+        </div>
+        <div class="table">
+          <button class="department_non_medical_supplies">
+            <h1>Deparment ~ Non Medical Supplies</h1>
+            <p>
+              Consists of Data of which Department has what all Non Medical
+              Supplies
+            </p>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    var logOut = document.querySelector(".log_out");
+    var doctorBtn = document.querySelector(".doctor");
+    var patientBtn = document.querySelector(".patient");
+    var nurseBtn = document.querySelector(".nurse");
+    var staffBtn = document.querySelector(".staff");
+    var departmentBtn = document.querySelector(".department");
+    var medicationBtn = document.querySelector(".medication");
+    var medical_recordsBtn = document.querySelector(".medical_records");
+    var billingBtn = document.querySelector(".billing");
+    var branchBtn = document.querySelector(".branch");
+    var non_medical_suppliesBtn = document.querySelector(
+      ".non_medical_supplies"
+    );
+    var doctor_medicationBtn = document.querySelector(".doctor_medication");
+    var doctor_nurseBtn = document.querySelector(".doctor_nurse");
+    var patient_nurseBtn = document.querySelector(".patient_nurse");
+    var patient_medicationBtn = document.querySelector(".patient_medication");
+    var department_medicationBtn = document.querySelector(
+      ".department_medication"
+    );
+    var department_non_medical_suppliesBtn = document.querySelector(
+      ".department_non_medical_supplies"
+    );
+
+    logOut.addEventListener("click", () => {
+      window.location.assign("/");
+    });
+    doctorBtn.addEventListener("click", () => {
+      window.location.assign("/tables/doctor");
+    });
+
+    patientBtn.addEventListener("click", () => {
+      window.location.assign("/tables/patient");
+    });
+
+    nurseBtn.addEventListener("click", () => {
+      window.location.assign("/tables/nurse");
+    });
+
+    staffBtn.addEventListener("click", () => {
+      window.location.assign("/tables/staff");
+    });
+
+    departmentBtn.addEventListener("click", () => {
+      window.location.assign("/tables/department");
+    });
+
+    medicationBtn.addEventListener("click", () => {
+      window.location.assign("/tables/medication");
+    });
+
+    medical_recordsBtn.addEventListener("click", () => {
+      window.location.assign("/tables/medical_records");
+    });
+
+    billingBtn.addEventListener("click", () => {
+      window.location.assign("/tables/billing");
+    });
+
+    branchBtn.addEventListener("click", () => {
+      window.location.assign("/tables/branch");
+    });
+
+    non_medical_suppliesBtn.addEventListener("click", () => {
+      window.location.assign("/tables/non_medical_supplies");
+    });
+
+    doctor_medicationBtn.addEventListener("click", () => {
+      window.location.assign("/tables/doctor_medication");
+    });
+
+    doctor_nurseBtn.addEventListener("click", () => {
+      window.location.assign("/tables/doctor_nurse");
+    });
+
+    patient_nurseBtn.addEventListener("click", () => {
+      window.location.assign("/tables/patient_nurse");
+    });
+
+    patient_medicationBtn.addEventListener("click", () => {
+      window.location.assign("/tables/patient_medication");
+    });
+
+    department_medicationBtn.addEventListener("click", () => {
+      window.location.assign("/tables/department_medication");
+    });
+
+    department_non_medical_suppliesBtn.addEventListener("click", () => {
+      window.location.assign("/tables/department_non_medical_supplies");
+    });
+  </script>
+</html>
